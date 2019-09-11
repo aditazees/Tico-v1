@@ -45,4 +45,3 @@ public class OpenScreen extends AppCompatActivity {
         }, SPLASH_TIME);
     }
 }
-

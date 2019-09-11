@@ -5,11 +5,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,7 +53,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.myaccount:
                         Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
                     case R.id.signout:
-                        Toast.makeText(MainActivity.this, "Sign-Out",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(MainActivity.this, Login.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.aboutus:
                         Toast.makeText(MainActivity.this, "About Tico",Toast.LENGTH_SHORT).show();break;
                     case R.id.help:

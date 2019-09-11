@@ -38,9 +38,7 @@ public class Signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        String[] arraySpinner = new String[] {
-                "USD", "INR", "EUR", "JPY"
-        };
+        String[] arraySpinner = new String[] {"INR", "USD", "EUR", "JPY"};
 
         Spinner s = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
@@ -95,7 +93,7 @@ public class Signup extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                             } else {
                                 User user=new User(nametyped,emailtyped,currencytypeentered);
-                                FirebaseDatabase.getInstance().getReference("Users")
+                                FirebaseDatabase.getInstance().getReference("User Info")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
