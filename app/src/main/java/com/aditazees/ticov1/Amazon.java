@@ -26,7 +26,7 @@ public class Amazon extends AppCompatActivity {
         setContentView(R.layout.activity_amazon);
 
         //navbar_midportion_start
-        dl = (DrawerLayout)findViewById(R.id.activity_main);
+        dl = (DrawerLayout)findViewById(R.id.activity_amazon);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         dl.addDrawerListener(t);
         t.syncState();

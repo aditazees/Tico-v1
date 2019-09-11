@@ -26,7 +26,7 @@ public class Help extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
         //navbar_midportion_start
-        dl = (DrawerLayout)findViewById(R.id.activity_main);
+        dl = (DrawerLayout)findViewById(R.id.activity_help);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         dl.addDrawerListener(t);
         t.syncState();

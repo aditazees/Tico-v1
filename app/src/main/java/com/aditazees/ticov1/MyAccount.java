@@ -26,7 +26,7 @@ public class MyAccount extends AppCompatActivity {
         setContentView(R.layout.activity_my_account);
 
         //navbar_midportion_start
-        dl = (DrawerLayout)findViewById(R.id.activity_main);
+        dl = (DrawerLayout)findViewById(R.id.activity_my_account);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
         dl.addDrawerListener(t);
         t.syncState();
