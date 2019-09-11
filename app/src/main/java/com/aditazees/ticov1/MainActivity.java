@@ -43,15 +43,40 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.home:
-                        Toast.makeText(MainActivity.this, "Home",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.typeamt:
-                        Toast.makeText(MainActivity.this, "Type Amount",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), TypeAmount.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.amazon:
-                        Toast.makeText(MainActivity.this, "Amazon",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), Amazon.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.flipkart:
-                        Toast.makeText(MainActivity.this, "Flipkart",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), Flipkart.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.myaccount:
-                        Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), MyAccount.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.signout:
                     {
                         FirebaseAuth.getInstance().signOut();
@@ -60,9 +85,19 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.aboutus:
-                        Toast.makeText(MainActivity.this, "About Tico",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), AboutUs.class);
+                        startActivity(i);
+                        break;
+                    }
                     case R.id.help:
-                        Toast.makeText(MainActivity.this, "Help",Toast.LENGTH_SHORT).show();break;
+                    {
+                        FirebaseAuth.getInstance().signOut();
+                        Intent i = new Intent(getApplicationContext(), Help.class);
+                        startActivity(i);
+                        break;
+                    }
                     default:
                         return true;
                 }

@@ -9,9 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:label="Home"></activity>
-        <activity android:name=".Signup" android:label="Sign Up" />
-        <activity android:name=".Login" android:label="Login" />
+        <activity
+            android:name=".Help"
+            android:label="Help"></activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="About Tico." />
+        <activity
+            android:name=".MyAccount"
+            android:label="My Account" />
+        <activity
+            android:name=".Flipkart"
+            android:label="Paste Link from Flipkart" />
+        <activity
+            android:name=".Amazon"
+            android:label="Paste Link from Amazon" />
+        <activity
+            android:name=".TypeAmount"
+            android:label="Type Amount" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Home" />
+        <activity
+            android:name=".Signup"
+            android:label="Sign Up" />
+        <activity
+            android:name=".Login"
+            android:label="Login" />
         <activity android:name=".OpenScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
