@@ -1,14 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/account"
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/home"
         android:icon="@drawable/ic_portrait_black_24dp"
-        android:title="My Account"/>
-    <item android:id="@+id/settings"
+        android:title="Home"/>
+    <item android:id="@+id/typeamt"
         android:icon="@drawable/ic_brightness_high_black_24dp"
-        android:title="Settings"/>
-    <item android:id="@+id/mycart"
+        android:title="Type Amount"/>
+    <item android:id="@+id/amazon"
         android:icon="@drawable/ic_local_grocery_store_black_24dp"
-        android:title="My Cart"/>
+        android:title="Amazon Link"/>
+    <item android:id="@+id/flipkart"
+        android:icon="@drawable/ic_local_grocery_store_black_24dp"
+        android:title="Flipkart Link"/>
+    </group>
+
+    <item android:title="Account">
+        <menu>
+            <item android:id="@+id/myaccount"
+                android:icon="@drawable/ic_portrait_black_24dp"
+                android:title="My Account"/>
+
+            <item android:id="@+id/signout"
+                android:icon="@drawable/ic_local_grocery_store_black_24dp"
+                android:title="Sign Out"/>
+        </menu>
+    </item>
+
+    <item android:title="Tico">
+        <menu>
+            <item android:id="@+id/aboutus"
+                android:icon="@drawable/ic_portrait_black_24dp"
+                android:title="About Us"/>
+
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_local_grocery_store_black_24dp"
+                android:title="Help"/>
+        </menu>
+    </item>
+
+
 
 </menu>
