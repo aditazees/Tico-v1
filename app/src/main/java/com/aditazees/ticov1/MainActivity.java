@@ -8,12 +8,28 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    TextView hitxt;
+    ProgressBar pbar;
+    DatabaseReference ref;
+
+    Button typeamountb, amazonb, flipkartb, myaccb, helpb;
 
 
     //navbar_header_start
@@ -26,6 +42,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        hitxt=(TextView)findViewById(R.id.homescreentext);
+        pbar=(ProgressBar)findViewById(R.id.homescreenpbar);
+        typeamountb=(Button) findViewById(R.id.typeamtbtn);
+        amazonb=(Button)findViewById(R.id.amazonbtn);
+        flipkartb=(Button)findViewById(R.id.flipkartbtn);
+        myaccb=(Button)findViewById(R.id.myaccountbtn);
+        helpb=(Button)findViewById(R.id.helpbtn);
+
+
+        ref= FirebaseDatabase.getInstance().getReference("User Info")
+                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
 
 
@@ -44,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.home:
                     {
-                        FirebaseAuth.getInstance().signOut();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                         break;
@@ -105,6 +132,64 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //navbar_midportion_end
+
+
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String v1 = dataSnapshot.child("name").getValue(String.class);
+                hitxt.setVisibility(View.INVISIBLE);
+                pbar.setVisibility(View.VISIBLE);
+                hitxt.setText("Hi, "+v1);
+                pbar.setVisibility(View.INVISIBLE);
+                hitxt.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+
+        typeamountb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(), TypeAmount.class);
+                startActivity(i);
+            }
+        });
+
+        amazonb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(), Amazon.class);
+                startActivity(i);
+            }
+        });
+
+        flipkartb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(), Flipkart.class);
+                startActivity(i);
+            }
+        });
+
+        myaccb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(), MyAccount.class);
+                startActivity(i);
+            }
+        });
+
+        helpb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i= new Intent(getApplicationContext(), Help.class);
+                startActivity(i);
+            }
+        });
 
 
 

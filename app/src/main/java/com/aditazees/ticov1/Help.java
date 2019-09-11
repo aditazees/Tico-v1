@@ -40,7 +40,6 @@ public class Help extends AppCompatActivity {
                 {
                     case R.id.home:
                     {
-                        FirebaseAuth.getInstance().signOut();
                         Intent i = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(i);
                         break;
