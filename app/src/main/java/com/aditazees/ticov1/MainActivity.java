@@ -30,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
         //navbar_midportion_start
         dl = (DrawerLayout)findViewById(R.id.activity_main);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);
-
         dl.addDrawerListener(t);
         t.syncState();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         nv = (NavigationView)findViewById(R.id.nv);
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -44,28 +41,25 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.home:
-                        Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Home",Toast.LENGTH_SHORT).show();break;
                     case R.id.typeamt:
-                        Toast.makeText(MainActivity.this, "Settings",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Type Amount",Toast.LENGTH_SHORT).show();break;
                     case R.id.amazon:
-                        Toast.makeText(MainActivity.this, "My Cart",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Amazon",Toast.LENGTH_SHORT).show();break;
                     case R.id.flipkart:
-                        Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Flipkart",Toast.LENGTH_SHORT).show();break;
                     case R.id.myaccount:
-                        Toast.makeText(MainActivity.this, "Settings",Toast.LENGTH_SHORT).show();break;
-                    case R.id.signout:
-                        Toast.makeText(MainActivity.this, "My Cart",Toast.LENGTH_SHORT).show();break;
-                    case R.id.aboutus:
                         Toast.makeText(MainActivity.this, "My Account",Toast.LENGTH_SHORT).show();break;
+                    case R.id.signout:
+                        Toast.makeText(MainActivity.this, "Sign-Out",Toast.LENGTH_SHORT).show();break;
+                    case R.id.aboutus:
+                        Toast.makeText(MainActivity.this, "About Tico",Toast.LENGTH_SHORT).show();break;
                     case R.id.help:
-                        Toast.makeText(MainActivity.this, "Settings",Toast.LENGTH_SHORT).show();break;
+                        Toast.makeText(MainActivity.this, "Help",Toast.LENGTH_SHORT).show();break;
                     default:
                         return true;
                 }
-
-
                 return true;
-
             }
         });
         //navbar_midportion_end
