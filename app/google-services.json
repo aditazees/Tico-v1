@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "827465610607",
+    "firebase_url": "https://tico-3e5dc.firebaseio.com",
+    "project_id": "tico-3e5dc",
+    "storage_bucket": "tico-3e5dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:827465610607:android:5307a122c31ed3bf51649a",
+        "android_client_info": {
+          "package_name": "com.aditazees.ticov1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "827465610607-9d21oiv43n5s4om3bvqtn0kdmee3dsqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditazees.ticov1",
+            "certificate_hash": "83c2df269dfa2a7aba4115f1da17600d77767a84"
+          }
+        },
+        {
+          "client_id": "827465610607-a6gjaf56097m7p5laevc0na6jb4q4l8k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQi698a8Obvhl36FkaCR_I-it2JfsHjsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "827465610607-a6gjaf56097m7p5laevc0na6jb4q4l8k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
