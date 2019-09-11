@@ -10,7 +10,7 @@ import android.view.WindowManager;
 
 public class OpenScreen extends AppCompatActivity {
 
-    private static int SPLASH_TIME = 1500;
+    private static int SPLASH_TIME = 3000;
 
 
     @Override
